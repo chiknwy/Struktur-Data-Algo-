@@ -19,7 +19,8 @@ int main() {
 	list1.insertToHead(40);
 	list1.insertToHead(50);
 	list1.insertToTail(60);
-	list1.insertAfter(20,70);
+	list1.insertAfter(20,70); /*In this insert after i make the after first and then the value 
+				    for example i put 70 after 20*/
 	
 	std::cout <<"head: " <<list1.head->val<<std::endl;
 	std::cout <<"tail: " <<list1.tail->val<<std::endl;
