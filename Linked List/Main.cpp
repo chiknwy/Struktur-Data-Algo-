@@ -19,8 +19,7 @@ int main() {
 	list1.insertToHead(40);
 	list1.insertToHead(50);
 	list1.insertToTail(60);
-	list1.insertAfter(20,70); /*In this insert after i make the after first and then the value 
-				    for example i put 70 after 20*/
+	list1.insertAfter(20,70);
 	
 	std::cout <<"head: " <<list1.head->val<<std::endl;
 	std::cout <<"tail: " <<list1.tail->val<<std::endl;
@@ -30,7 +29,7 @@ int main() {
 	LinkedList userlist1;
 	while (vals!=5){
 	
-	std::cout<<"----------LinkedList----------\n";
+	std::cout<<"\n----------LinkedList----------\n";
 	std::cout<<"1. Insert to head\n";
 	std::cout<<"2. Insert to tail\n";
 	std::cout<<"3. Insert after\n";
@@ -44,7 +43,10 @@ int main() {
 			
 			case 1:
 				int usersL;
+				if(userlist1.head !=NULL){
 				userlist1.printAll();
+				}
+				
 				std::cout<<"Insert To head: ";
 				std::cin>>usersL;
 				userlist1.insertToHead(usersL);
@@ -53,7 +55,9 @@ int main() {
 				break;
 				
 			case 2:
+				if(userlist1.head !=NULL){
 				userlist1.printAll();
+				}
 				std::cout<<"Insert To tail: ";
 				std::cin>>usersL;
 				userlist1.insertToTail(usersL);
@@ -63,6 +67,7 @@ int main() {
 				
 			case 3:
 				int A,B;
+				std::cout<<"Insert After\n";
 				std::cout<<"Insert Value: ";
 				std::cin>>B;
 				std::cout<<"After: ";
@@ -71,9 +76,14 @@ int main() {
 				userlist1.printAll();
 				
 				break;
+				
 			
 			case 4:
 				userlist1.printAll();
+				if(userlist1.head !=NULL){
+				std::cout <<"head: " <<userlist1.head->val<<std::endl;
+				std::cout <<"tail: " <<userlist1.tail->val<<std::endl;
+				}
 				break;
 				
 			case 5:
