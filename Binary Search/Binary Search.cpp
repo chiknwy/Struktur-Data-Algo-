@@ -25,9 +25,17 @@ int binarySearch(int arr[], int l, int r, int x)
 
 int main()
 {
-	int arr[] = { 2, 3, 4, 10, 40 };
-	int x = 10;
+	int arr[] = { -3, -2 ,-1 ,0 ,2, 3, 4, 10, 40 };
+	int x;
 	int n = sizeof(arr) / sizeof(arr[0]);
+	
+	for(int i=0;i<n;i++){
+		cout << i << ": "<<arr[i] << endl;
+	}
+	
+	cout << "Input a value that you want to search: ";
+	cin >> x;
+	
 	int result = binarySearch(arr, 0, n - 1, x);
 	
 	if(result == -1){
