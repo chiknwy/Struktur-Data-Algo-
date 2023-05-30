@@ -16,12 +16,11 @@ void LinkedList::insertToHead(int input){
 void LinkedList::printAll(){
 	Node *tmp = head;
 	
-	while (tmp==NULL){
+	if (tmp==NULL){
 		std::cout<<"Linked List is Empty!!\n";
-		break;
 	}
 	
-	if(tmp!=NULL){
+	else{
 	while(tmp!=NULL){
 		std::cout<<tmp->val<<"->";
 		tmp = tmp->next;
