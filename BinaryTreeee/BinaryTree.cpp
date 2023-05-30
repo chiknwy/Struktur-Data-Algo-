@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "Head.h"
 
 using namespace std;
@@ -100,16 +99,16 @@ void BinaryTree::inOrderRecursive(Node *currentRoot){
 void BinaryTree::PreOrderRecursive(Node *currentRoot){
 	if(currentRoot != NULL){
 		cout<<currentRoot->id<<",";
-		inOrderRecursive(currentRoot->left);
-		inOrderRecursive(currentRoot->right);
+		PreOrderRecursive(currentRoot->left);
+		PreOrderRecursive(currentRoot->right);
 	}
 	
 }
 
 void BinaryTree::PostOrderRecursive(Node *currentRoot){
 	if(currentRoot != NULL){
-		inOrderRecursive(currentRoot->left);
-		inOrderRecursive(currentRoot->right);
+		PostOrderRecursive(currentRoot->left);
+		PostOrderRecursive(currentRoot->right);
 		cout<<currentRoot->id<<",";
 	}
 	
