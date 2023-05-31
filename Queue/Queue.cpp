@@ -1,35 +1,26 @@
 #include <iostream>
-#include "Queue.h"
+#include "Stack.h"
 using namespace std;
 
-void Queue::enqueue(int input){
+void Stack::push(int val){
 	Node* temp = new Node;
-        temp->value = input;
-        temp->next = NULL;
-        if (front == NULL) {
-            front = temp;
-        } 
-		
-		else {
-            rear->next = temp;
-        }
-        rear = temp;
+    temp->value = val;
+    temp->next = top;
+    top = temp;
 }
-void Queue::dequeue(){
-	if (front == NULL) {
-            cout << "Queue is empty." << endl;
+void Stack::pop(){
+	if (top == NULL) {
+            cout << "Stack is empty." << endl;
             return;
         }
-        else{
-        Node* temp = front;
-        front = front->next;
+        Node* temp = top;
+        top = top->next;
         delete temp;
-        }
-}
-void Queue::printAll(){
-	Node *tmp = front;
+} 
+void Stack::printAll(){
+	Node *tmp = top;
 	while(tmp!=NULL){
-		cout<<tmp->value<<"<-";
+		cout<<tmp->value<<"\n";
 		tmp = tmp->next;
 	}
 	cout<<endl;
