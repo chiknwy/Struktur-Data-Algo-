@@ -20,7 +20,7 @@ void Stack::pop(){
 void Stack::printAll(){
 	Node *tmp = top;
 	while(tmp!=NULL){
-		cout<<tmp->value<<" -> ";
+		cout<<tmp->value<<"\n";
 		tmp = tmp->next;
 	}
 	cout<<endl;
