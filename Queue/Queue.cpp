@@ -29,7 +29,7 @@ void Queue::dequeue(){
 void Queue::printAll(){
 	Node *tmp = front;
 	while(tmp!=NULL){
-		cout<<tmp->value<<"->";
+		cout<<tmp->value<<"<-";
 		tmp = tmp->next;
 	}
 	cout<<endl;
