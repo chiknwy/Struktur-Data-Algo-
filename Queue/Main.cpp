@@ -36,7 +36,7 @@ int main() {
 			
 			case 1: {
 				int val;
-				cout << "Push: ";
+				cout << "Enqueue: ";
 				cin >> val;
 				userqueue1.enqueue(val);
 				userqueue1.printAll();
@@ -51,8 +51,9 @@ int main() {
 				} 
 				
 				else {
-					cout << "Queue is empty. Cannot pop." << std::endl;
+					cout << "Queue is empty. Cannot dequeue." << std::endl;
 				}
+				
 				userqueue1.printAll();
 				break;
 			}
