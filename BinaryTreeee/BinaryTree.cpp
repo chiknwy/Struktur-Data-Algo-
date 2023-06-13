@@ -68,7 +68,7 @@ Node* BinaryTree::findMax() {
     }
 
     if (node != NULL) {
-        cout << "Minimum value: " << node->id << endl;
+        cout << "Maximum value: " << node->id << endl;
     } else {
         cout << "Binary tree is empty." << endl;
     }
